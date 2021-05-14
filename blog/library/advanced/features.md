@@ -175,7 +175,7 @@ themeConfig: {
 
 The token info of the code block should be `chart`, for example:
 
-```chart
+```json
 {
   "type": "doughnut",
   "data": {
@@ -194,7 +194,7 @@ The token info of the code block should be `chart`, for example:
 
 ::: details Code
 ~~~json
-```chart
+```json
 {
   "type": "doughnut",
   "data": {
@@ -277,7 +277,7 @@ roughViz.js supports the following 7 chart types:
 
 So the format of the code block's token info should be `roughviz-{ chart-type }`. For example, to draw a Donut chart:
 
-```roughviz-donut
+```json
 {
   "data": {
     "labels": ["North", "South", "East", "West"],
@@ -291,7 +291,7 @@ So the format of the code block's token info should be `roughviz-{ chart-type }`
 
 ::: details Code
 ~~~
-```roughviz-donut
+```json
 {
   "data": {
     "labels": ["North", "South", "East", "West"],
@@ -320,7 +320,7 @@ themeConfig: {
 
 The token info of the code block should be `markmap`, for example:
 
-```markmap
+```
 # Fruit
 
 ## Red
@@ -336,7 +336,7 @@ The token info of the code block should be `markmap`, for example:
 
 ::: details Code
 ~~~
-```markmap
+```
 # Fruit
 
 ## Red

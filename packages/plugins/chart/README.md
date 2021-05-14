@@ -37,7 +37,7 @@ module.exports = {
 The token info of the code block should be `chart`, for example:
 
 ~~~json
-```chart
+```json
 {
   "type": "bar",
   "data": {

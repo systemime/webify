@@ -37,7 +37,7 @@ module.exports = {
 The token info of the code block should be `markmap`, for example:
 
 ~~~markdown
-```markmap
+```
 # Fruit
 
 ## Red

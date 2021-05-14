@@ -116,7 +116,7 @@ module.exports = {
       },
       // {
       //   path: "/img/home-bg/3.jpg",
-      //   mask: "rgba(68, 74, 83, .1)"  // 较亮图片模版
+      //   mask: "rgba(68, 74, 83, .1)"  // 较亮图片蒙版
       // },
       {
         path: "/img/home-bg/4.jpg",

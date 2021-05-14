@@ -49,7 +49,7 @@ roughViz.js supports the following chart types:
 So the format of your code block's `token.info` should be `roughviz-{ chart-type }`. For example, to draw a Donut chart:
 
 ~~~json
-```roughviz-donut
+```json
 {
   "data": {
     "labels": ["North", "South", "East", "West"],
