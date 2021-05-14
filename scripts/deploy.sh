@@ -1,4 +1,4 @@
-cd /Users/qifeng/Documents/vuepress-theme-gungnir/dist
+cd /Users/qifeng/Desktop/UnitTest/renovamen.github.io/dist
 git init
 git add -A
 git commit -m 'deploy'
