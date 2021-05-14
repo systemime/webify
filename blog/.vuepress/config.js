@@ -114,10 +114,10 @@ module.exports = {
         path: "/img/home-bg/2.jpg",
         mask: "rgb(251, 170, 152, .2)"
       },
-      {
-        path: "/img/home-bg/3.jpg",
-        mask: "rgba(68, 74, 83, .1)"
-      },
+      // {
+      //   path: "/img/home-bg/3.jpg",
+      //   mask: "rgba(68, 74, 83, .1)"  // 较亮图片模版
+      // },
       {
         path: "/img/home-bg/4.jpg",
         mask: "rgba(19, 75, 50, .2)"
