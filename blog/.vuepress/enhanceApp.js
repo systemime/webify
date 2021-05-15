@@ -19,7 +19,8 @@ import {
   FaRedditAlien,
   RiNeteaseCloudMusicLine,
   IoLibrary,
-  RiBook2Fill
+  RiBook2Fill,
+  OiGitCompare
 } from "oh-vue-icons/icons";
 
 OhVueIcon.add(
@@ -41,5 +42,6 @@ OhVueIcon.add(
   FaRedditAlien,
   RiNeteaseCloudMusicLine,
   IoLibrary,
-  RiBook2Fill
+  RiBook2Fill,
+  OiGitCompare
 );
