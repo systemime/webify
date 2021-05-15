@@ -14,7 +14,7 @@
     "build": "vuepress build blog --dest dist",
     "preview": "cd dist && http-server",
     "pub": "sh scripts/deploy.sh",
-    "deploy": "git push git@github.com:systemime/QBlog-build.git main && "
+    "deploy": "git push git@github.com:systemime/QBlog-build.git main && yarn build && yarn pub"
   },
   "dependencies": {
     "compression-webpack-plugin": "6.1.1"
