@@ -4,7 +4,7 @@ title: About
 avatar: /img/about-avatar.png
 name: Qi Feng
 subname: 柒麟
-cv: /files/cv/brief/en.pdf
+cv: /img/libraru/library.png
 
 interests:
   - Python
@@ -25,14 +25,10 @@ education:
 
 ## Miscellaneous
 
-- 🔍 [This blog](https://github.com/Renovamen/renovamen.github.io) is powered by [VuePress](https://vuepress.vuejs.org/), themed by [Gungnir](https://github.com/Renovamen/vuepress-theme-gungnir), and hosted by [Github Pages](https://pages.github.com/) and [Vercel](https://vercel.com).
+- 🔍 [这个博客](https://github.com/systemime/systemime.github.io) 使用 [VuePress](https://vuepress.vuejs.org/) 构建, 主题来自 [Gungnir](https://github.com/Renovamen/vuepress-theme-gungnir), 同时基于 [Github Pages](https://pages.github.com/) 和 [Vercel](https://vercel.com).
 
-- 🎃 *Renovamen* is an Latin word means *renewal*.
-
-- 🧐 My full version of Curriculum Vitae can be found [here](/files/cv/full/en.pdf).
-
-- 🥎 I used to be a member of the softball team and the vice president of the baseball and softball association (Jiading branch) of Tongji University.
+- 🌳 曾经担任过一些乱七八糟的职务，带着一群人攻坚过，也带着一群人扫过大街.
 
 - 🌭 My dream: `while(sleeping and health): money <<= 1`
 
-- 🎃 I'm currently interested in constructing buildings in Minecraft.
+- 🎃 热爱钻研新技术，研究 python 、go 和 SQL

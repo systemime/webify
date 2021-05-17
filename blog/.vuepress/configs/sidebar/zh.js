@@ -1,38 +1,27 @@
 module.exports = {
   "/library/": [
     {
-      title: "基础",
+      title: "简述",
       collapsable: false,
       children: [
-        "",
-        "basic/installation",
-        "basic/config",
-        "basic/content"
+        ""  // 空白默认README
       ]
     },
     {
-      title: "进阶",
+      title: "计算机基础",
       collapsable: false,
       children: [
-        "advanced/features",
-        "advanced/icons",
-        "advanced/highlighting-themes"
+        "basic/操作系统",
+        "basic/计算机组成原理"
       ]
     },
     {
-      title: "插件",
+      title: "后端语言",
       collapsable: false,
       children: [
         "plugins/",
-        "plugins/chart",
-        "plugins/mermaid",
-        "plugins/roughviz",
-        "plugins/markmap",
-        "plugins/katex",
-        "plugins/md-plus",
-        "plugins/reading-time",
-        "plugins/baidu-tongji",
-        "plugins/rss"
+        "plugins/Python",
+        "plugins/Go"
       ]
     }
   ]

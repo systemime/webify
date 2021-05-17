@@ -11,6 +11,7 @@
   "useWorkspaces": true,
   "scripts": {
     "dev": "vuepress dev blog --no-cache --host 0.0.0.0 --port 4000",
+    "cdev": "vuepress dev blog --cache --host 0.0.0.0 --port 4000",
     "build": "vuepress build blog --dest dist",
     "preview": "cd dist && http-server",
     "pub": "sh scripts/deploy.sh",
