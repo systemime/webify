@@ -202,3 +202,15 @@ wdta53:tornado协程解析
 cets46:transitions 状态机文档翻译
 7be8a0c1-031f-476d-9aa5-b8f100c2d092:你还在用GDB调试程序吗？ - 知乎
 2ea3143a-daed-4989-a67c-a947a3377f75:yarn 国内加速，修改镜像源 | Laravel China 社区
+nibo2g:修改Git提交信息
+354715a4-7237-426a-b9e0-54ba35488c47:Go: 延长变量的生命周期
+1ae1257f-92ba-4965-bf25-9b930ef965a3:在编程中，有两件事情最难：聊聊 Go 中的简短变量名
+95f08c98-924f-4952-a4b6-b1b4ff2a8954:Shred命令使用详解
+0f6c23b4-472c-4ac0-9ca2-161c68621f5f:Django进阶：事务操作、悲观锁和乐观锁(附代码演示)
+e523b01c-7f34-46c6-9003-8581a9d455b8:单机内存内缓存怎么做？go-cache 了解下
+6ee1d3e7-2e3d-4e73-8fd7-9ebbeaf7f5d2:Python进阶：一步步理解Python中的元类metaclass
+1c54461b-4c9c-4dba-b6c2-32ffa262a7d0:一文看懂Python多进程与多线程编程(工作学习面试必读)
+35df07c1-8ff9-4401-a3d3-99d5becdbfd9:Mysql根据字段a的不同值，更新字段b为不同值_小皮de梦想的博客-CSDN博客
+13d613b4-5f55-4f87-9580-e580f3d4d2b1:一文看懂Python collections模块的高效数据类型
+5b8a087e-d87b-47f9-852b-8bdde43e3bd4:干货 | 携程机票前端安卓虚拟机测试集群建设实践
+26343ac4-5eef-4398-8f98-27b5cb0d6b0f:[面试]：Python的垃圾回收机制你能答上来吗？

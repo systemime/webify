@@ -31,4 +31,4 @@ education:
 
 - 🌭 My dream: `while(sleeping and health): money <<= 1`
 
-- 🎃 热爱钻研新技术，研究 python 、go 和 SQL
+- 🎃 常用Python, Go, Shell, SQl, 热爱钻研并尝试新技术
