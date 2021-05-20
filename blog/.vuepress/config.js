@@ -11,6 +11,13 @@ module.exports = {
         name: "viewport",
         content: "width=device-width,initial-scale=1,user-scalable=no"
       }
+    ],
+    [
+      "meta",
+      {
+        name: "google-site-verification",
+        content: "NoOtylL1UjaH-a-fr4i3oxWmMtlF04Z8qfTb9Qjca4U"
+      }
     ]
   ],
   configureWebpack: {
