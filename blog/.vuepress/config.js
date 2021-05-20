@@ -23,7 +23,7 @@ module.exports = {
       "meta",
       {
         name: "baidu-site-verification",
-        content: "code-Cx22FRyoRw"
+        content: "code-M4aEuFBzHU"
       }
     ]
   ],
@@ -169,7 +169,17 @@ module.exports = {
   markdown: {
     // lineNumbers: true,
     extractHeaders: ["h2", "h3", "h4", "h5"]
-  }
+  },
+  plugins: [
+    [
+      '@renovamen/vuepress-plugin-rss', {
+        site_url: "https://qfdxz.top",  // 网站链接 （必须）
+        copyright: "Systemime 2018-2021",  // 版权信息（可选）
+        count: 100,  // 需要在 rss 上显示多少篇文章（可选）
+        filter: (frontmatter) => { return [true|false] },  // 文章筛选函数（可选）
+      }
+    ]
+  ]
   // configureWebpack: () => {
   //   const NODE_ENV = process.env.NODE_ENV;
   //   if (NODE_ENV === "production") {
