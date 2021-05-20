@@ -1,0 +1,212 @@
+---
+title: 一文看懂Python collections模块的高效数据类型
+subtitle: 文章暂存
+author: systemime
+date: 2021-05-19
+header_img: /img/in-post/header/13.jpg
+catalog: true
+tags:
+  - python
+---
+摘要.
+
+<!-- more -->
+原作: George Seif, 发表于 medium.com, 大江狗原创翻译, 并对原文稍作修改。
+
+Python 的最大优势之一是其广泛的模块和软件包。这将 Python 的功能扩展到许多受欢迎的领域，包括机器学习、数据科学和 Web 开发等, 其中最好的模块之一是 Python 的内置 collections 模块。
+
+一般来讲，python 的 collections 是用于存储数据集合 (比如列表 list, 字典 dict, 元组 tuple 和集合 set) 的容器。这些容器内置在 Python 中，可以直接使用。该 collections 模块提供了额外的，高性能的数据类型，可以增强你的代码，使事情变得更清洁，更容易。
+
+让我们看一看关于集合模块最受欢迎的数据类型以及如何使用它们的教程！
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/buaFLFKicRoBZC9FGb3TE0ccCoSBdqictfmgC7nLW8ApZDPXqyYe725EHQsZ3ddK4oevV5hOCdHAy21OwTukjicqA/640?wx_fmt=jpeg)
+
+**Counter**
+
+Counter() 是字典对象的子类。Counter() 可接收一个可迭代遍历的对象（例如字符串、列表或元组）作为参数，并返回计数器字典。字典的键将是可遍历对象中的唯一元素，每个键的值将是可迭代对象中的每个唯一元素对应的计数。
+
+首先，让我们先从 collections 模块导入 Counter 这个数据类型：
+
+```javascript
+from collections import Counter
+```
+
+要创建 Counter 对象，就像将其分配给其他任何对象类一样，将其分配给变量。您唯一要确保的是传递给它的参数是可迭代的对象。
+
+```ini
+lst = [1, 2, 3, 3, 2, 1, 1, 1, 2, 2, 3, 1, 2, 1, 1]
+counter = Counter(lst)
+```
+
+我们可以使用简单的打印功能比如 print(counter) 来查看我们获得的新的对象，它看起来像个字典，如下所示：  
+
+```properties
+Conter ({1：7，2：2：5，3：3})
+```
+
+您可以使用键值 key 访问任何计数器条目，如下所示。这与从标准 Python 字典中提取元素的方式完全相同。
+
+```makefile
+lst = [1, 2, 3, 3, 2, 1, 1, 1, 2, 2, 3, 1, 2, 1, 1]
+counter = Counter(lst)
+print(counter[1]) # 返回7。1的数量有7个
+```
+
+## most_common() 函数
+
+到目前为止，Counter 对象最有用的功能是 most_common() 函数。将其应用于 Counter 对象时，它将返回 N 个最常见元素及其计数的列表，按从最常见到最不常见的顺序排列。
+
+```makefile
+lst = [1, 2, 3, 3, 2, 1, 1, 1, 2, 2, 3, 1, 2, 1, 1]
+counter = Counter(lst)
+print(counter.most_common(2)) # 返回最常见两个元素及其计数
+```
+
+上面的代码打印出以下元组列表：  
+
+```json
+[（1，7），（2，5）]
+```
+
+每个元组的第一个元素是列表中的唯一原始，每个元组的第二个元素是计数。这是一种快速简便的方法，实现比如 “获取列表中最常见的 3 个元素及其计数” 的功能。
+
+要了解有关 Counter 功能的更多信息，请查阅官方文档。
+
+defaultdict 工作起来完全像一个普通的 Python 字典，但它有额外的奖励。当您试图访问一个不存在的键，它不会引发错误，而是使用不存在的键创建新的 key，其对应的默认值是根据创建 defaultdict 对象时作为参数传递的数据类型自动设置的。请看下面的代码作为示例。
+
+```makefile
+from collections import defaultdict
+
+names_dict = defaultdict(int)
+names_dict["Bob"] = 1
+names_dict["Katie"] = 2
+sara_number = names_dict["Sara"]
+print(names_dict)
+```
+
+在上面的示例中，int 作为默认初始化值传递给我们的 defaultdict 对象。接下来，为每个键 "Bob" 和 "Katie" 赋值。但是在最后一行，我们尝试访问一个尚未定义的键，即 “Sara” 的键。
+
+在普通字典中，这将引发错误。使用 defaultdict 后不再报错，而是自动以 "Sara" 创建一个新键 key，其初始化值为 0，是因为我们指定了 int 数据类型作为初始化值。
+
+因此，最后一行打印出具有所有 3 个名称和相应值的字典。
+
+```typescript
+defaultdict(<class 'int'>, {'Bob': 1, 'Katie': 2, 'Sara': 0})
+```
+
+如果要将设置列表类型数据做为一个 key 的初始化值，我们只需设置 names_dict = defaultdict(list)，此时 “Sara” 将使用空列表初始化\[]。此时打印结果如下所示：  
+
+```typescript
+defaultdict(<class 'int'>, {'Bob': 1, 'Katie': 2, 'Sara': []})
+```
+
+要了解有关 defaultdict 功能的更多信息，请查阅官方文档。
+
+deque 队列是在计算机科学里最基本的数据结构，遵循先入先出（FIFO）的原理。简单来说，这意味着添加到队列中的第一个对象也必须是要删除的第一个对象。我们只能在队列的前面插入内容，而只能从队列的后面删除内容，而队列中间没有任何动作。
+
+collections 模块提供的 deque 对象是能实现队列数据结构的优化版本。该功能的主要特色是能够保持队列的大小，即如果将队列的最大长度设置为 10，则将 deque 根据 FIFO 原理添加和删除元素以保持最大长度始终为 10。这是到目前为止，Python 中队列的最佳实现。
+
+让我们从一个例子开始。我们将创建一个 deque 对象，然后使用从 1 到 10 的整数进行初始化。
+
+```python
+from collections import deque
+
+my_queue = deque(maxlen=10)
+
+for i in range(10):
+    my_queue.append(i+1)
+
+print(my_queue)
+```
+
+在上面的代码中，我们首先初始化 deque，指定我们希望它始终保持最大长度为 10。其次，当我们通过循环将值插入到队列中时。注意，填充队列的功能与使用常规 Python 列表的方式完全相同。最后，我们打印出结果。  
+
+```cpp
+deque([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], maxlen=10)
+```
+
+由于队列中有一个 maxlen=10，并且循环中添加了 10 个元素，因此队列中包含了从 1 到 10 的所有数字。现在，让我们看看添加更多数字时会发生什么。
+
+```go
+for i in range(10, 15):
+    my_queue.append(i+1)
+
+print(my_queue)
+```
+
+在上面的代码中，我们在队列中添加了另外 5 个元素，数字从 11 到 15。但是我们的队列只有一个，且 maxlen=10。因此必须删除一些元素，才能插入新的元素。由于队列必须遵循 FIFO 原则，因此它将删除最先插入队列中的前 5 个元素，即\[1、2、3、4、5]。打印语句的结果如下：  
+
+```cpp
+deque([6, 7, 8, 9, 10, 11, 12, 13, 14, 15], maxlen=10)
+```
+
+要了解有关该功能的更多信息 deque，请查阅官方文档。  
+
+在 Python 中创建常规元组时，其元素是通用的且未命名，这迫使您记住每个元组元素的确切索引。可以使用具名元组 namedtuple 来解决这个问题。
+
+该 namedtuple() 返回与用于所述元组中的每个位置和一个通用名固定名称的元组 namedtuple 对象。要使用 namedtuple，请先为其创建一个模板。下面的代码创建一个 namedtuple 名为 Person 的模板，其属性为 name，age 和 job。
+
+```javascript
+from collections import namedtuple
+
+Person = namedtuple('Person', 'name age job')
+```
+
+创建模板后，您可以使用它来创建 namedtuple 对象。让我们使用 Person 模板为 2 个人创建 2 个 namedtuple 对象，并打印它们。
+
+```ini
+Person = namedtuple('Person', 'name age job')
+
+Mike = Person(name='Mike', age=30, job='Data Scientist')
+Kate = Person(name="Kate", age=28, job='Project Manager')
+
+print(Mike)
+print(Kate)
+```
+
+上面的代码非常简单。我们使用 namedtuple 模板的所有属性来初始化 “人员” ，以后可以直接使用 Mike 或 Kate 使用元组元素，而不用再使用索引了。上面的打印语句将给出以下结果：
+
+```javascript
+Person(name='Mike', age=30, job='Data Scientist')
+Person(name='Kate', age=28, job='Project Manager')
+```
+
+因此，namedtuple 能够更容易地使用，更合适元组对象的组织，可读性也更强。
+
+要了解更多关于 namedtuple 的功能，请查阅官方文档。
+
+### **OrderedDict**
+
+由于原文未介绍 collections 模块中的有序字典结构而 OrderedDict 又非常重要，这部分由大江狗手动新增。
+
+在 Python 3.5 及以前之前版本，Python 的字典 dict 是无序的。如果先键值 A 先插入字典，键值 B 后插入字典，但是当你打印字典的 Keys 列表时，你会发现 B 可能在 A 的前面。对于无序字典，每次打印字典时每次显示元素的顺序都不一样。如果你的 Python 版本较老，需要借助 collections 模块提供的 OrderedDict 实现有序字典。
+
+OrderedDict 类似于正常的字典，只是它记住了元素插入的顺序。当对有序的词字典上迭代时，返回元素的顺序是按第一次添加元素的顺序进行。当元素删除时，排好序的词典保持着排序的顺序；但是当新元素添加时，就会被添加到末尾。
+
+OrderedDict 实现方式如下：  
+
+```python
+dd = {'banana': 3, 'apple':4, 'pear': 1, 'orange': 2}
+#按key排序
+od_by_key = collections.OrderedDict(sorted(dd.items(), key=lambda t: t[0]))
+print(od_by_key)
+#按照value排序
+od_by_value = collections.OrderedDict(sorted(dd.items(),key=lambda t:t[1]))
+print(od_by_value)
+#输出
+OrderedDict([('apple', 4), ('banana', 3), ('orange', 2), ('pear', 1)])
+OrderedDict([('pear', 1), ('orange', 2), ('banana', 3), ('apple', 4)])
+```
+
+Python collections 模块的知识，你学到了吗?
+
+原文链接  
+
+[https://levelup.gitconnected.com/introducing-high-performance-datatypes-in-python-with-the-collections-library-3d8c334827a5](https://levelup.gitconnected.com/introducing-high-performance-datatypes-in-python-with-the-collections-library-3d8c334827a5)
+
+大江狗  
+
+2020.12
+
+ [https://mp.weixin.qq.com/s?\_\_biz=MjM5OTMyODA4Nw==&mid=2247485170&idx=1&sn=928753c3c61b8a05785c89565dce3f51&chksm=a73c66ca904befdc929138bac2d1424663afd7b870f85a882d8f911f821f8d16a4293930e284&cur_album_id=1606311302715539457&scene=189#rd](https://mp.weixin.qq.com/s?__biz=MjM5OTMyODA4Nw==&mid=2247485170&idx=1&sn=928753c3c61b8a05785c89565dce3f51&chksm=a73c66ca904befdc929138bac2d1424663afd7b870f85a882d8f911f821f8d16a4293930e284&cur_album_id=1606311302715539457&scene=189#rd) 
+ [https://mp.weixin.qq.com/s?\_\_biz=MjM5OTMyODA4Nw==&mid=2247485170&idx=1&sn=928753c3c61b8a05785c89565dce3f51&chksm=a73c66ca904befdc929138bac2d1424663afd7b870f85a882d8f911f821f8d16a4293930e284&cur_album_id=1606311302715539457&scene=189#rd](https://mp.weixin.qq.com/s?__biz=MjM5OTMyODA4Nw==&mid=2247485170&idx=1&sn=928753c3c61b8a05785c89565dce3f51&chksm=a73c66ca904befdc929138bac2d1424663afd7b870f85a882d8f911f821f8d16a4293930e284&cur_album_id=1606311302715539457&scene=189#rd)
