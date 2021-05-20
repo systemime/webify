@@ -18,6 +18,13 @@ module.exports = {
         name: "google-site-verification",
         content: "NoOtylL1UjaH-a-fr4i3oxWmMtlF04Z8qfTb9Qjca4U"
       }
+    ],
+    [
+      "meta",
+      {
+        name: "baidu-site-verification",
+        content: "code-Cx22FRyoRw"
+      }
     ]
   ],
   configureWebpack: {
