@@ -5,11 +5,12 @@ module.exports = {
   description: "希望热情而又企图安逸的综合体.",
   head: [
     ["link", { rel: "icon", href: "/img/logo.svg" }],
+    
     [
       "meta",
       {
-        name: "viewport",
-        content: "width=device-width,initial-scale=1,user-scalable=no"
+        name: "baidu-site-verification",
+        content: "code-M4aEuFBzHU"
       }
     ],
     [
@@ -22,8 +23,8 @@ module.exports = {
     [
       "meta",
       {
-        name: "baidu-site-verification",
-        content: "code-M4aEuFBzHU"
+        name: "viewport",
+        content: "width=device-width,initial-scale=1,user-scalable=no"
       }
     ]
   ],
@@ -175,7 +176,7 @@ module.exports = {
       '@renovamen/vuepress-plugin-rss', {
         site_url: "https://qfdxz.top",  // 网站链接 （必须）
         copyright: "Systemime 2018-2021",  // 版权信息（可选）
-        count: 100,  // 需要在 rss 上显示多少篇文章（可选）
+        count: 150,  // 需要在 rss 上显示多少篇文章（可选）
         filter: (frontmatter) => { return [true|false] },  // 文章筛选函数（可选）
       }
     ]
