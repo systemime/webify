@@ -5,28 +5,10 @@ module.exports = {
   description: "希望热情而又企图安逸的综合体.",
   head: [
     ["link", { rel: "icon", href: "/img/logo.svg" }],
-    
-    [
-      "meta",
-      {
-        name: "baidu-site-verification",
-        content: "code-M4aEuFBzHU"
-      }
-    ],
-    [
-      "meta",
-      {
-        name: "google-site-verification",
-        content: "NoOtylL1UjaH-a-fr4i3oxWmMtlF04Z8qfTb9Qjca4U"
-      }
-    ],
-    [
-      "meta",
-      {
-        name: "viewport",
-        content: "width=device-width,initial-scale=1,user-scalable=no"
-      }
-    ]
+    ["meta", { name: "keywords", content: "拔丝土豆,python,go,教程,面试,linux" }],
+    ["meta", { name: "baidu-site-verification", content: "code-bAXLIiEJrN" }],
+    ["meta", { name: "google-site-verification", content: "NoOtylL1UjaH-a-fr4i3oxWmMtlF04Z8qfTb9Qjca4U" }],
+    ["meta", { name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }]
   ],
   configureWebpack: {
     plugins: [
@@ -56,7 +38,7 @@ module.exports = {
     hitokoto: true,  // enable hitokoto (一言) or not?
 
     search: true,  // 可选：是否启用搜索，默认：true
-    searchMaxSuggestions: 10,  // 可选：搜索的最大结果数，默认：10
+    searchMaxSuggestions: 20,  // 可选：搜索的最大结果数，默认：10
     searchPlaceholder: "$ grep ...",  // 可选：搜索栏占位文本，默认："$ grep ..."
     searchIcon: "ri-search-2-line",  // 搜索图标
     codeTheme: "gungnir-dark",  // 代码主题
@@ -65,7 +47,7 @@ module.exports = {
     rss: {
       site_url: "https://qfdxz.top",
       copyright: "ListenWind 2018-2021",
-      count: 20
+      count: 300
     },
     comment: {
       platform: "github",
@@ -161,7 +143,7 @@ module.exports = {
       }
     },
     footer: `
-      &copy; <a href="https://github.com/systemime" target="_blank">Renovamen</a> 2018-2021
+      &copy; <a href="https://github.com/systemime" target="_blank">Systemime</a> 2018-2021
       <br>
       Powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a> &
       <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
@@ -175,8 +157,8 @@ module.exports = {
     [
       '@renovamen/vuepress-plugin-rss', {
         site_url: "https://qfdxz.top",  // 网站链接 （必须）
-        copyright: "Systemime 2018-2021",  // 版权信息（可选）
-        count: 150,  // 需要在 rss 上显示多少篇文章（可选）
+        copyright: "ListenWind 2018-2021",  // 版权信息（可选）
+        count: 300,  // 需要在 rss 上显示多少篇文章（可选）
         filter: (frontmatter) => { return [true|false] },  // 文章筛选函数（可选）
       }
     ]
