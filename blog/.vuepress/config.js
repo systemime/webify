@@ -76,7 +76,7 @@ module.exports = {
     },
     analytics: {
       // ga: "UA-146858305-4",
-      ga: "G-PWL6F9GCG1",
+      ga: "G-K6PPVZP230",
       // ba: "0958eaa31f4f4656f36bd33673332939"
       ba: "c3e3e0cdb298aa92c4a79a6fbbc8a263"
     },
