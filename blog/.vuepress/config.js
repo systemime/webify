@@ -1,11 +1,11 @@
 const path = require("path");
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 module.exports = {
-  title: "南柯一梦",
-  description: "希望热情而又企图安逸的综合体.",
+  title: "听风的小站",
+  description: "Python,Go,Linux,Kubernetes,面试,全栈,技术博客分享，希望热情而又企图安逸的综合体.",
   head: [
     ["link", { rel: "icon", href: "/img/logo.svg" }],
-    ["meta", { name: "keywords", content: "拔丝土豆,python,go,教程,面试,linux" }],
+    ["meta", { name: "keywords", content: "听风的小站,python,go,教程,面试,linux" }],
     ["meta", { name: "baidu-site-verification", content: "code-bAXLIiEJrN" }],
     ["meta", { name: "google-site-verification", content: "NoOtylL1UjaH-a-fr4i3oxWmMtlF04Z8qfTb9Qjca4U" }],
     ["meta", { name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }]

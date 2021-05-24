@@ -4,7 +4,7 @@ title: About
 avatar: /img/about-avatar.png
 name: Qi Feng
 subname: 柒麟
-cv: /img/libraru/library.png
+cv: /files/cv/2020中国技术发展白皮书.pdf
 
 interests:
   - Python
@@ -31,4 +31,4 @@ education:
 
 - 🌭 My dream: `while(sleeping and health): money <<= 1`
 
-- 🎃 常用Python, Go, Shell, SQl, 热爱钻研并尝试新技术
+- 🎃 常用Python, Go, Shell, Linux, 热爱钻研并尝试新技术
