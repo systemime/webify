@@ -2,20 +2,12 @@
 layout: Links
 title: Links
 links:
-  - title: 我自己能用就完事了
+  - title: 原博客
     items:
-      - sitename: Flint
+      - sitename: scp131
         url: https://github.com/Renovamen/flint
-        img: /img/links/flint.svg
-        desc: 山寨版 PyTorch
-      - sitename: Metallic
-        url: https://github.com/Renovamen/metallic
-        img: /img/links/meta.svg
-        desc: 准元学习工具包
-      - sitename: Alkaid
-        url: https://github.com/Renovamen/alkaid
-        img: /img/links/rl.svg
-        desc: 准强化学习工具包
+        img: /img/links/scp131.webp
+        desc: Java女装博主
       - sitename: Oh, Vue Icons!
         url: https://oh-vue-icons.netlify.app
         img: /img/links/icon.svg
@@ -29,19 +21,15 @@ links:
       - sitename: What If?
         url: https://note.zxh.io
         img: /img/links/me.svg
-        desc: 乱七八糟的笔记
+        desc: 图书库
       - sitename: Portfolio-macOS
         url: https://portfolio.zxh.io/
         img: /img/links/portfolio.png
-        desc: 仿 masOS 的个人主页
-      - sitename: OI & ACM
-        url: https://oi.renovamen.ink
-        img: /img/links/acm.svg
-        desc: 退役蒟蒻的人生回顾
+        desc: 仿 masOS 的主页
       - sitename: Leetcode
         url: https://leetcode.renovamen.ink
         img: /img/links/leetcode.svg
-        desc: 失学失业少年的忧虑
+        desc: 冲向明天的血路
       - sitename: Midgard
         url: https://resume.zxh.io
         img: /img/links/resume.svg
