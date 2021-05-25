@@ -214,3 +214,6 @@ e523b01c-7f34-46c6-9003-8581a9d455b8:单机内存内缓存怎么做？go-cache �
 13d613b4-5f55-4f87-9580-e580f3d4d2b1:一文看懂Python collections模块的高效数据类型
 5b8a087e-d87b-47f9-852b-8bdde43e3bd4:干货 | 携程机票前端安卓虚拟机测试集群建设实践
 26343ac4-5eef-4398-8f98-27b5cb0d6b0f:[面试]：Python的垃圾回收机制你能答上来吗？
+8af0a9e1-1e44-4b37-9723-b4f5d22a7122:Python可变参数、闭包陷阱说明及解决方案
+7ae71f04-e911-40c6-bdea-aa030a382779:Python闭包(Closure)的理解及应用
+71ad35bd-cfae-476d-ab97-2c3b119f0a83:利用python在大量数据文件下删除某一行
