@@ -2,10 +2,10 @@
 layout: Links
 title: Links
 links:
-  - title: 原博客
+  - title: 友联
     items:
       - sitename: scp131
-        url: https://github.com/Renovamen/flint
+        url: https://scp131.github.io/
         img: /img/links/scp131.webp
         desc: Java女装博主
       - sitename: Oh, Vue Icons!
@@ -19,7 +19,7 @@ links:
   - title: 咸鱼翻滚
     items:
       - sitename: What If?
-        url: https://note.zxh.io
+        url: https://qfdxz.top/library/
         img: /img/links/me.svg
         desc: 图书库
       - sitename: Portfolio-macOS
