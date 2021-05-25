@@ -97,6 +97,10 @@ module.exports = {
           {
             icon: "ri-netease-cloud-music-line",
             link: "https://music.163.com/#/my/m/music/playlist?id=550411417"
+          },
+          {
+            icon: "ci-cnd",
+            link: "https://blog.csdn.net/qq_36274515"
           }
           // ...
         ]

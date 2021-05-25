@@ -20,7 +20,8 @@ import {
   RiNeteaseCloudMusicLine,
   IoLibrary,
   RiBook2Fill,
-  OiGitCompare
+  OiGitCompare,
+  CiCnd
 } from "oh-vue-icons/icons";
 
 OhVueIcon.add(
@@ -43,5 +44,6 @@ OhVueIcon.add(
   RiNeteaseCloudMusicLine,
   IoLibrary,
   RiBook2Fill,
-  OiGitCompare
+  OiGitCompare,
+  CiCnd
 );
