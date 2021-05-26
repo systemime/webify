@@ -6,7 +6,7 @@ module.exports = {
   head: [
     ["link", { rel: "icon", href: "/img/logo.svg" }],
     ["meta", { name: "keywords", content: "听风的小站,python,go,教程,面试,linux" }],
-    ["meta", { name: "'baidu-site-verification'", content: "'code-sLlhSGukCq'" }],
+    ["meta", { name: 'baidu-site-verification', content: 'code-sLlhSGukCq' }],
     ["meta", { name: "google-site-verification", content: "eUXRJuS_jNPf7G1Vwz5bgDBRvIvTgA6YgJCkzWIBGgU" }],
     ["meta", { name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }]
   ],
