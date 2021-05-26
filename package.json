@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "vuepress dev blog --no-cache --host 0.0.0.0 --port 4000",
     "cdev": "vuepress dev blog --cache --host 0.0.0.0 --port 4000",
-    "build": "vuepress build blog --dest dist && cp scripts/robots.txt dist",
+    "build": "vuepress build blog --dest dist && cp scripts/robots.txt scripts/baidu_verify_code-sLlhSGukCq.html dist",
     "preview": "cd dist && http-server",
     "pub": "sh scripts/deploy.sh",
     "deploy": "git push git@github.com:systemime/QBlog-build.git main && yarn build && yarn pub"
