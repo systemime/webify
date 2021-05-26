@@ -1,8 +1,8 @@
 const path = require("path");
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
 module.exports = {
-  title: "听风的小站",
-  description: "Python,Go,Linux,Kubernetes,面试,全栈,技术博客分享，希望热情而又企图安逸的综合体.",
+  title: "山笑i",
+  description: "Python,Go,Linux,Kubernetes,面试,全栈,技术博客,山笑i.",
   head: [
     ["link", { rel: "icon", href: "/img/logo.svg" }],
     ["meta", { name: "keywords", content: "听风的小站,python,go,教程,面试,linux" }],
@@ -45,21 +45,19 @@ module.exports = {
 
     languageIcon: "hi-translate",  // 语言选项图标
     rss: {
-      site_url: "https://qfdxz.top",
+      site_url: "https://shanxiaoi.top",
       copyright: "ListenWind 2018-2021",
       count: 300
     },
     comment: {
       platform: "github",
       owner: "systemime",
-      repo: "OnTheRoad",
-      clientId: "44945ce0f6f01f549126",
-      clientSecret: "d9e6f110be2dbe6404b0274e0bd0b164eb283107"
+      repo: "Vssue",
+      clientId: "723c310d89c277077f65",
+      clientSecret: "1aff6d7c7ab71f8d546edf2b01aabf27"
     },
     analytics: {
-      // ga: "UA-146858305-4",
-      ga: "G-K6PPVZP230",
-      // ba: "0958eaa31f4f4656f36bd33673332939"
+      ga: "G-FY8S3WDJRT",
       ba: "c3e3e0cdb298aa92c4a79a6fbbc8a263"
     },
     katex: true,
@@ -82,9 +80,9 @@ module.exports = {
       },
     },
     personalInfo: {
-      name: "拔丝土豆",
+      name: "山笑う",
       avatar: "/img/avatar.jpeg",
-      description: "一个情绪稳定的成年人",
+      description: "星光荡开宇宙，本喵闪耀其中",
       sns: {
         github: "systemime",
         zhihu: "shi-wan-wan-50",
@@ -119,6 +117,10 @@ module.exports = {
       //   path: "/img/home-bg/3.jpg",
       //   mask: "rgba(68, 74, 83, .1)"  // 较亮图片蒙版
       // },
+      {
+        path: "/img/home-bg/3.webp",
+        mask: "rgba(54, 73, 121, .4)"
+      },
       {
         path: "/img/home-bg/4.jpg",
         mask: "rgba(19, 75, 50, .2)"
@@ -160,7 +162,7 @@ module.exports = {
   plugins: [
     [
       '@renovamen/vuepress-plugin-rss', {
-        site_url: "https://qfdxz.top",  // 网站链接 （必须）
+        site_url: "https://shanxiaoi.top",  // 网站链接 （必须）
         copyright: "ListenWind 2018-2021",  // 版权信息（可选）
         count: 300,  // 需要在 rss 上显示多少篇文章（可选）
         filter: (frontmatter) => { return [true|false] },  // 文章筛选函数（可选）
