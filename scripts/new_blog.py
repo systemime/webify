@@ -164,19 +164,37 @@ class FileWorker:
         ]
         return [f"{val}\n" for val in header]
 
-    def wirte_file(self):
-        header = self.build_header_info
+    def _write_blog(self, file_name, info):
+        logger.warning(
+            f"线程 :: {threading.currentThread().native_id} 启动写入 {file_name} 任务"
+        )
         try:
-            with open(self.path / f"posts/{self.file_name}.md", "w+") as f:
-                f.writelines(header)
+            with open(file_name, "w+") as f:
+                f.writelines(info)
         except Exception as e:
             logger.error(f"无法写入文件: {e}")
 
+    def _write_index(self, file_name, info):
+        logger.warning(f"线程 :: {threading.currentThread().native_id} 启动写入 索引 任务")
         try:
-            with open(self.path / "slug_title.txt", "a+") as sl:
-                sl.write(f"{self.title_id}:{self.title}\n")
+            with open(file_name, "a+") as sl:
+                sl.write(info)
         except Exception as e:
             logger.error(f"文章索引未记录，请手动添加: {e}")
+
+    def wirte_file(self):
+        header = self.build_header_info
+        task_blog = threading.Thread(
+            target=self._write_blog,
+            args=[self.path / f"posts/{self.file_name}.md", header],
+        )
+        task_index = threading.Thread(
+            target=self._write_index,
+            args=[self.path / "slug_title.txt", f"{self.title_id}:{self.title}\n"],
+        )
+        for task in (task_blog, task_index):
+            task.start()
+            task.join()
 
 
 if __name__ == "__main__":
@@ -212,7 +230,7 @@ if __name__ == "__main__":
     worker = IdWorker(1, 1, 0)
     title_id = worker.get_id()
 
-    logger.info(f"get titile_id: {title_id}")
+    logger.info(f"GET titile_id >>> {title_id}")
 
     f_worker = FileWorker(
         Path(args.path),
