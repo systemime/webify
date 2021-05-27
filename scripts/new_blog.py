@@ -200,7 +200,8 @@ class FileWorker:
 if __name__ == "__main__":
 
     """
-    python scripts/new_blog.py -t "mysql中一千个不用NULL的理由" -s "技术分享" -ts "sql" -d "MySQL中null对性能有非常大对影响，聊聊使用null的原因以及不用null的理由"
+    eg:
+        python scripts/new_blog.py -t "xxxxx" -s "分类" -ts "标签1" -d "简介摘要"
     """
 
     parser = argparse.ArgumentParser(description="文章描述信息")
