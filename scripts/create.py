@@ -6,7 +6,9 @@ import threading
 import time
 import logging
 
+from collections import deque
 from pathlib import Path
+from itertools import islice
 
 
 logger = logging.getLogger(__name__)
@@ -142,11 +144,25 @@ class FileWorker:
         self.description = description
         self.date = date
 
+    @staticmethod
+    def count(iterable):
+        """
+        cardinality.count() 源码实现
+        https://github.com/wbolster/cardinality/blob/master/cardinality.py#L48-L52
+        :param iterable: 可迭代对象
+        :return:
+        """
+        if hasattr(iterable, "__len__"):
+            return len(iterable)
+
+        d = deque(enumerate(iterable, 1), maxlen=1)
+        return d[0][0] if d else 0
+
     @property
     def build_header_info(self):
 
-        header_list = [val.name for val in self.photo_path.iterdir()]
-        header_image = header_list[random.randint(0, len(header_list) - 1)]
+        num = random.randint(0, self.count(self.photo_path.iterdir()) - 1)
+        header_image = next(islice(self.photo_path.iterdir(), num, num + 1))
 
         header = [
             "---",
@@ -154,7 +170,7 @@ class FileWorker:
             f"subtitle: {self.subtitle}",
             f"author: {self.author}",
             f"date: {self.date}",
-            f"header_img: /img/in-post/header/{header_image}",
+            f"header_img: /img/in-post/header/{header_image.name}",
             f"catalog: {self.catalog}",
             "tags:",
             "\n".join([f"  - {val}" for val in self.tags]),
@@ -201,7 +217,7 @@ if __name__ == "__main__":
 
     """
     eg:
-        python scripts/new_blog.py -t "xxxxx" -s "分类" -ts "标签1" -d "简介摘要"
+        python scripts/create.py -t "xxxxx" -s "分类" -ts "标签1" -d "简介摘要"
     """
 
     parser = argparse.ArgumentParser(description="文章描述信息")
