@@ -16,10 +16,16 @@ links:
         url: https://vuepress-theme-gungnir.vercel.app/
         img: /img/links/gungnir.svg
         desc: VuePress 主题
+  - title: 实用工具
+    items:
+      - sitename: Pythontutor
+        url: http://www.pythontutor.com/
+        img: /img/links/pythontutor.png
+        desc: 可视化Python、Java等代码执行过程
   - title: 咸鱼翻滚
     items:
       - sitename: What If?
-        url: https://qfdxz.top/library/
+        url: https://shanxiaoi.top/library/
         img: /img/links/me.svg
         desc: 图书库
       - sitename: Portfolio-macOS
