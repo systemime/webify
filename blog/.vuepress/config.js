@@ -15,7 +15,7 @@ module.exports = {
         new CompressionWebpackPlugin({
             filename: '[path][base].br',
             algorithm: 'brotliCompress',
-            test: /\.(js|css|html|svg)$/,  //匹配文件名
+            test: /\.(js|css|html|svg|png|jpg|webp)$/,  //匹配文件名
             threshold: 5120,//对5K以上的数据进行压缩
             minRatio: 0.8,
             deleteOriginalAssets:false,//是否删除源文件
@@ -82,7 +82,7 @@ module.exports = {
     personalInfo: {
       name: "山笑う",
       avatar: "/img/avatar.jpeg",
-      description: "星光荡开宇宙，本喵闪耀其中",
+      description: "海到无边天作岸，山登绝顶我为峰",
       sns: {
         github: "systemime",
         zhihu: "shi-wan-wan-50",
