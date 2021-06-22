@@ -238,3 +238,5 @@ d9a300a2-7d2e-4d9b-a1f9-460b3290b200:django rest framework serializers小结
 ff7db4d7-0c40-4e5b-aea8-e62e66398f27:django 中使用DateTime常用的时间查询_Areigninhell的博客-CSDN博客
 fb6588a4-b35e-43bc-b686-f1ac0bc7be99:django 之 select filter查询_liu45464546的博客-CSDN博客_django filter查询
 1404743772457275392:【小记】django中DateTimeField字段比较操作
+1406799157762592768:【小记】python与django中dict中特殊类型json处理办法
+1406799976218103808:【小记】使用元类自动处理同一类型不同业务逻辑
