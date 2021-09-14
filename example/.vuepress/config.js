@@ -137,6 +137,8 @@ module.exports = {
     footer: `
       &copy; <a href="https://github.com/Renovamen" target="_blank">Renovamen</a> 2018-2021
       <br>
+      「Powered by <a href="https://webify.cloudbase.net/" target="_blank">CloudBase Webify</a> 」
+      <br>
       Powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a> &
       <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
     `
