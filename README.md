@@ -1,71 +1,31 @@
-# Gungnir
+# Hi! 🧐
 
-[![npm](https://img.shields.io/npm/v/vuepress-theme-gungnir.svg?style=flat-square&logo=npm)](https://www.npmjs.com/package/vuepress-theme-gungnir) [![docs](https://img.shields.io/badge/Docs-Gungnir-26A2FF?style=flat-square)](https://vuepress-theme-gungnir.vercel.app/docs/) [![license](https://img.shields.io/badge/License-Apache--2.0-green?style=flat-square)](LICENSE)
-
-A blog theme for [VuePress](https://vuepress.vuejs.org/). The [Jekyll](https://jekyllrb.com/) version of it is available [here](https://github.com/Renovamen/jekyll-theme-gungnir).
-
-**Gungnir** is the spear of the god Odin in Norse mythology.
-
-🇬🇧 English Intro | 🇨🇳 [中文说明](README-CN.md)
-
-![preview](example/.vuepress/public/img/docs/gungnir.jpg)
+[![blog](https://img.shields.io/badge/Blog-Renovamen-red?style=flat-square)](https://zxh.io) [![renovamen's blog](https://img.shields.io/badge/GitHub-renovamen.github.io-6A7EC2?style=flat-square)](https://github.com/Renovamen/renovamen.github.io) [![VuePress](https://img.shields.io/badge/VuePress-build-1aad19?style=flat-square)](https://github.com/vuejs/vuepress) [![vuepress-theme-gungnir](https://img.shields.io/badge/Gungnir-theme-26a2ff?style=flat-square)](https://github.com/Renovamen/vuepress-theme-gungnir) [![license](https://img.shields.io/badge/License-Apache--2.0-orange?style=flat-square)](LICENSE)
 
 
-&nbsp;
+This is my blog, it is powered by [VuePress](https://vuepress.vuejs.org/) and themed by [Gungnir](https://github.com/Renovamen/vuepress-theme-gungnir).
 
-## Features
+My blog used to be built with [Jekyll](https://jekyllrb.com/) (see the [`jekyll`](https://github.com/Renovamen/renovamen.github.io/tree/jekyll) branch). The Jekyll version of theme Gungnir is avalible [here](https://github.com/Renovamen/jekyll-theme-gungnir).
 
-- Simple and beautiful
-- Responsive design
-- Multi-level navigation
-- Switchable cover images for home page
-- Dark and light mode: system theme detection with a theme-switcher to set the theme as per the user preference
-- Search
-- Table of contents
-- Multiple syntax highlighting themes, support full screening the code blocks (inspired by WordPress theme [Sakura](https://github.com/mashirozx/Sakura))
-- Tex support ([KaTex](https://github.com/KaTeX/KaTeX))
-- Draw charts and graphs in Markdown easily: [Chart.js](https://www.chartjs.org), [Mermaid](https://mermaid-js.github.io), [roughViz.js](https://github.com/jwilber/roughViz) and [markmap](https://github.com/gera2ld/markmap)
-- Markdown enhancements:
-  - Footnote ([markdown-it-footnote](https://github.com/markdown-it/markdown-it-footnote))
-  - Mark ([markdown-it-mark](https://github.com/markdown-it/markdown-it-mark))
-- Analytics ([Google Analytics](https://analytics.google.com/) and [Baidu Tongji](https://tongji.baidu.com/))
-- Comment ([Vssue](https://github.com/meteorlxy/vssue))
-- RSS
-- Reading time
-- Multi-language support (English, Simplified Chinese)
-- Archive page with tags, links page
+Any way, just have fun with this blog: https://zxh.io
 
 
 &nbsp;
-
-## Installation
+## Usage
 
 ```bash
-yarn add -D vuepress-theme-gungnir
-# or
-npm i -D vuepress-theme-gungnir
+# install dependencies
+yarn install
+
+# serve with hot reload
+yarn run dev  # vuepress dev blog
+
+# build for production with minification
+yarn run build  # vuepress build blog
 ```
 
 
 &nbsp;
-
-## Demo
-
-Here are some live demos:
-
-- [vuepress-theme-gungnir.vercel.app](https://vuepress-theme-gungnir.vercel.app/)
-- [renovamen.ink](https://renovamen.ink) (my blog)
-
-
-&nbsp;
-
-## Documentation
-
-Documentation is available [here](https://vuepress-theme-gungnir.vercel.app/docs/).
-
-
-&nbsp;
-
 ## License
 
-VuePress theme Gungnir is [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) licensed, see the [LICENSE](packages/theme-gungnir/LICENSE) file for details.
+This blog is [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) licensed, see the [LICENSE](LICENSE) file for details.
